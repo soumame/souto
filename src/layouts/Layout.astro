@@ -5,6 +5,7 @@ export interface Props {
 
 const { title } = Astro.props;
 import Navbar from "../components/navbar.astro"
+
 ---
 
 <!DOCTYPE html>
@@ -18,7 +19,8 @@ import Navbar from "../components/navbar.astro"
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
 
 	</head>
-	<body>
+	<body class="overflow-hidden">
+		<language initial="ja" lang="ja,en"></language>
 		<Navbar />
 		<div class="max-h-screen max-w-screen overflow-hidden">
 		<slot />
