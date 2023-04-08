@@ -1,10 +1,10 @@
 ---
 import { languages } from '../i18n/ui';
 ---
-<ul>
+<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
   {Object.entries(languages).map(([lang, label]) => (
     <li>
-      <a href={`/${lang}`}>{label}</a>
+      <a href={`/${lang}`} class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{label}</a>
     </li>
   ))}
 </ul>
