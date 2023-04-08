@@ -24,11 +24,11 @@ export const languages = {
       'nav.soto': '得丸創生',
     },
     mame: {
-      'nav.home': 'まめぇ',
-      'nav.AboutPage': '豆豆',
-      'nav.Twitter': 'まめっめー',
-      'nav.Outstndrs': 'まめ豆豆',
-      'nav.Discord': 'まーめまめ',
-      'nav.soto': 'そうまめ',
+      'nav.home': '🫘🫘🫘🫘',
+      'nav.AboutPage': '🫘🫘🫘🫘',
+      'nav.Twitter': '🫘🫘🫘',
+      'nav.Outstndrs': '🫘🫘',
+      'nav.Discord': '🫘🫘🫘🫘🫘',
+      'nav.soto': '🫘🫘🫘🫘',
     },
   } as const;
