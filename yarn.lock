@@ -352,6 +352,11 @@
   "resolved" "https://registry.npmjs.org/@exodus/schemasafe/-/schemasafe-1.0.0.tgz"
   "version" "1.0.0"
 
+"@fortawesome/fontawesome-free@^6.4.0":
+  "integrity" "sha512-0NyytTlPJwB/BF5LtRV8rrABDbe3TdTXqNB3PdZ+UUUZAEIrdOJdmABqKjt4AXwIoJNaRVVZEXxpNrqvE1GAYQ=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-6.4.0.tgz"
+  "version" "6.4.0"
+
 "@humanwhocodes/momoa@^2.0.3":
   "integrity" "sha512-RE815I4arJFtt+FVeU1Tgp9/Xvecacji8w/V6XtXsWWH/wz/eNkNbhb+ny/+PlVZjV0rxQpRSQKNKE3lcktHEA=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/momoa/-/momoa-2.0.4.tgz"
