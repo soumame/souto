@@ -1,36 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
-<!--言語切り替えはここだよ -->
-<script>
-	function toggleElements() {
-	  const element1 = document.getElementById('element1');
-	  const element2 = document.getElementById('element2');
-	  
-	  if (element1.classList.contains('hidden')) {
-		element1.classList.remove('hidden');
-		element2.classList.add('hidden');
-	  } else {
-		element1.classList.add('hidden');
-		element2.classList.remove('hidden');
-	  }
-	}
-</script>
+まめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめまめ
+<!--サーバーから/jaへリダイレクト -->
+<!--以下括弧を外して使用可能リダイレクトタグ＊
+    画像が表示されないバグあり -->
 
-
-<Layout title="得丸創生">
-	<div id="element1">
-		<iframe class="w-full h-screen"src="https://miro.com/app/live-embed/uXjVP53Yovc=/?embedMode=view_only_without_ui&autoplay=true&moveToViewport=-682,-2264,678,436" frameBorder="0" scrolling="no" allowFullScreen></iframe>
-	</div>
-	<div id="element2" class="hidden">
-		<iframe class="w-full h-screen" src="https://miro.com/app/live-embed/uXjVMV_j7K8=?embedMode=view_only_without_ui&autoplay=true&moveToViewport=-1998,-1270,674,515" frameBorder="0" scrolling="no" allowFullScreen></iframe>
-	</div>
-	
-</Layout>
-
-<div id="element1">
-	aa	</div>
-		<div id="element2" class="hidden">
-	ii	</div>
-		<button onclick="toggleElements()">要素を切り替える</button>
+<meta http-equiv="refresh" content="0;url=/ja" />
