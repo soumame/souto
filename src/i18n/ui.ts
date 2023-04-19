@@ -3,7 +3,7 @@ export const languages = {
     ja: '日本語',
     mame: '🫘Bean/まめ',
   };
-  
+
   export const defaultLang = 'ja';
   
   export const ui = {
@@ -22,7 +22,7 @@ export const languages = {
       'nav.Twitter': 'Twitter',
       'nav.Outstndrs': 'チーム逸般人',
       'nav.Discord': 'Discordに参加',
-      'nav.soto': '得丸創生',
+      'nav.soto': 'So Tokumaru',
       'button.close': '閉じる',
     },
     mame: {
