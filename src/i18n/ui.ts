@@ -27,7 +27,7 @@ export const languages = {
     },
     mame: {
       'nav.home': '🫘🫘🫘🫘',
-      'nav.more': '🫘🫘🫘🫘',
+      'nav.services': '🫘🫘🫘🫘🫘🫘🫘🫘',
       'nav.Twitter': '🫘🫘🫘',
       'nav.Outstndrs': '🫘🫘',
       'nav.Discord': '🫘🫘🫘🫘🫘',
