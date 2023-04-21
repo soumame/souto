@@ -1,55 +1,72 @@
-# Astro Starter Kit: Basics
-
-```
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+﻿
 
 
-## 🚀 Project Structure
+# 機能・コンポーネント一覧
 
-Inside of your Astro project, you'll see the following folders and files:
+**Card(カード)**
+情報をわかりやすくするためのカード。
+**LanguagePicker(言語)**
+言語選択が可能になります。翻訳は/i18n/ui.ts で大部分が可能（ローカライズする可能性のあるコンテンツはページごとに書いてね）
+**Modal(ポップアップ)**
+リンクを踏む前の注意書きとかで使うのを想定しているが色々なところで使えるので、今後１つのページ内で複数使えるように'検討'中です
+**Navbar(メニューバー)**
+レスポンシブ対応。Layoutに内包されているので書かなくても自動的に適用されます。メニューボタンのタイトルには文章は直接書かず、以下の様に書いてください
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+    {t('nav.TITLE')}
+そして、ui.tsにてそれに該当する項目を書いてください。
+**Layout(レイアウト)**
+全てのページで必ず使用してください。テンプレを動かすのに使用していたりしているため、これを使わないと正しく動作しない可能性があります。
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+# Slot一覧
 
-All commands are run from the root of the project, from a terminal:
+## Modal（ポップアップ）
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+> *注意：現時点(4/19時点)では１つのページに１つのmodal（ポップアップ）しか使えません*
 
-## 👀 Want to learn more?
+*スロット設定
+現在のModalスロットの種類です：*
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+	<!-- タイトル -->
+	<slot  name="modal-title"/> 
+	<!-- 文章１ -->
+	<slot  name="modal-text-1"/>
+	<!-- 文章２ -->
+	<slot  name="modal-text-2"/>
+*スロット呼び出し（例）
+以下のスロットに代入してスロットに割り当てます：*
+	
+    <!-- タイトル -->
+    <p  slot="modal-title">タイトル</p>
+    <!-- 文章１ -->
+    <p  slot="modal-text-1"  class=" text-gray-900 dark:text-white">文章がここに</p>
+    <!-- 文章２ -->
+    <p  slot="modal-text-1"  class=" text-gray-900 dark:text-white">
+  
+
+## Card(カード)
+*スロット設定
+現在のCardスロットの種類です：*
+
+      <!-- アイコン -->
+      <slot  name="icon"/>
+      <!-- ヘッダー -->
+      <slot  name="header"/>
+      <!-- 本文 -->
+      <slot  name="sentence"/>
+      <!-- リンク -->
+      <slot  name="weblink"/>
+
+*スロット呼び出し（例）
+以下のスロットに代入してスロットに割り当てます：*
+
+      <!-- アイコン -->
+      <p  slot="icon"></p>
+      <!-- ヘッダー -->
+      <p  slot="header"  class="text-blue-400 dark:text-blue-300">Learn+</p>
+      <!-- 本文 -->
+      <p  slot="sentence">チーム逸般人が提供するDiscordをベースとしたコミュニティ。</p>
+      <!-- リンク -->
+      <p  slot="weblink"><a class="inline-flex items-center text-blue-500 hover:underline"  href="https://	 ...</p>
