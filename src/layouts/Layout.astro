@@ -18,7 +18,7 @@ const lang = getLangFromUrl(Astro.url);
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark:bg-slate-600 bg-slate-50">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -28,7 +28,7 @@ const lang = getLangFromUrl(Astro.url);
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
 
 	</head>
-	<body class="gap-y-1">
+	<body class="">
 		<language initial="ja" lang="ja,en"></language>
 		<Navbar />
 		<div class="max-h-screen max-w-screen">
