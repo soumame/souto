@@ -1,8 +1,17 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import ScrollUp from '../../components/scroll-up.astro';
 ---
 
 <Layout title="So Tokumaru">
-	<iframe class="w-full h-screen" src="https://miro.com/app/live-embed/uXjVMV_j7K8=?embedMode=view_only_without_ui&autoplay=true&moveToViewport=-768,-2403,775,769" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+	<div class="lang w-full h-[80vh] place-content-center">
+		<div>
+		<h1 class="text-3xl font-bold">aaaa</h1>
+		<p class="text-xl">aaaa</p>
+		</div>
+	</div>
+	<!--Miroのボード埋め込み -->
+	<iframe class="w-full h-screen" src="https://miro.com/app/live-embed/uXjVMV_j7K8=?embedMode=view_only_without_ui&autoplay=false&moveToViewport=-768,-2403,775,769" frameBorder="0" scrolling="no" allowFullScreen></iframe>
 </Layout>
+<ScrollUp />

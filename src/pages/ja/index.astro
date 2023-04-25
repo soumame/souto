@@ -1,11 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import ScrollUp from '../../components/scroll-up.astro';
 ---
 
 
+
 <Layout title="得丸創生">
-	<div class="lang">
-		<iframe class="w-full h-screen"src="https://miro.com/app/live-embed/uXjVP53Yovc=/?embedMode=view_only_without_ui&autoplay=true&moveToViewport=-682,-2264,678,436" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+	<div class="lang w-full h-[80vh] place-content-center justify-center items-center">
+		<div>
+		<h1 class="text-3xl  font-Maru">得丸創生あいうえお</h1>
+		<p class="text-xl">2021年4月に開催された、得丸創生のミーティングのボードを公開しています。</p>
+		</div>
 	</div>
+	<div class="lang">
+		<!--Miroのボード埋め込み -->
+		<iframe class="w-full h-screen"src="https://miro.com/app/live-embed/uXjVP53Yovc=/?embedMode=view_only_without_ui&autoplay=false&moveToViewport=-682,-2264,678,436" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+	</div>
+	<ScrollUp />
 </Layout>
