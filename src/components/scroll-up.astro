@@ -1,0 +1,30 @@
+---
+
+---
+<!-- Back to top button -->
+<button id="to-top-button" onclick="goToTop()" title="Go To Top"
+class="pushed hidden fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-2xl drop-shadow-md bg-teal-500 dark:bg-teal-700 text-white text-3xl font-bold">&uarr;</button>
+
+<script>
+    var toTopButton = document.getElementById("to-top-button");
+
+    // When the user scrolls down 200px from the top of the document, show the button
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            toTopButton.classList.remove("hidden");
+        } else {
+            toTopButton.classList.add("hidden");
+        }
+    }
+    // ページ内から`pushed`クラスを持つすべてのボタンを探す。
+    const buttons = document.querySelectorAll('button.pushed');
+
+    // 各ボタンがクリックされたときのハンドリング
+    buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    });
+
+</script>
+
