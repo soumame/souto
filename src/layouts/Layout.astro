@@ -13,6 +13,8 @@ import LanguagePicker from '../components/LanguagePicker.astro';
 
 const lang = getLangFromUrl(Astro.url);
 import Fonts from '../components/fonts.astro';
+import { SEO } from "astro-seo";
+
 ---
 
 
@@ -27,6 +29,7 @@ import Fonts from '../components/fonts.astro';
 		<title>{title}</title>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
 		<Fonts/>
+		<slot name="header_custom"/> 
 	</head>
 	<body class="">
 		<language initial="ja" lang="ja,en"></language>

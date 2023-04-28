@@ -2,11 +2,38 @@
 import Layout from '../../layouts/Layout.astro';
 import ScrollUp from '../../components/scroll-up.astro';
 import Socials from '../../components/socials.astro';
+import { SEO } from "astro-seo";
 ---
-
-
-
 <Layout title="得丸創生">
+	<div slot="header_custom">
+	<SEO
+      title="得丸 創生 - そうまめ"
+      description="得丸創生って誰だよ！？という方のためのページです"
+      openGraph={{
+        basic: {
+          title: "得丸 創生 - そうまめ",
+          type: "A type.",
+          image: "https://avatars.githubusercontent.com/u/46675982?v=4",
+        }
+      }}
+      twitter={{
+        creator: "@so_to9"
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          },
+          { name: "twitter:title", content: "得丸 創生 - そうまめ" },
+          { name: "twitter:description", content: "得丸創生って誰だよ！？という方のためのページです" },
+        ],
+      }}
+    />
+	</div>
 	<div class="lang w-full min-h-screen bg-emerald-50 dark:bg-sky-950">
 		<div class="container mx-auto md:pt-56 p-16 pt-56">
 		<!--プロフィール -->
