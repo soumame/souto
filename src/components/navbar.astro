@@ -51,7 +51,7 @@ setInterval(messageAppear, 4500);
 </script>
 
 
-<nav class="fixed bg-white/30 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md">
+<nav class="fixed bg-white/30 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md z-50">
     <div class="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
     <a href={`/${lang}/`} class="flex items-center">
         <img src="/soumame.svg" class="h-12 mr-1" alt="Soumame" />
@@ -99,7 +99,7 @@ setInterval(messageAppear, 4500);
             </a>
           </li>
           <li>
-            <a href="https://discord.gg/kczgGEKJg2" class="block md:my-2 py-3 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-violet-500 rounded-lg hover:bg-violet-200 md:hover:bg-slate-700 md:hover:text-violet-400 md:dark:hover:text-violet-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <a href={`/${lang}/community`} class="block md:my-2 py-3 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-violet-500 rounded-lg hover:bg-violet-200 md:hover:bg-slate-700 md:hover:text-violet-400 md:dark:hover:text-violet-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                 {t('nav.Discord')}
             </a>
           </li>
@@ -109,8 +109,8 @@ setInterval(messageAppear, 4500);
             </a>
           </li>
           <li>
-            <a href={`/${lang}/services`} class="block md:my-2 py-3 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-slate-800 rounded-lg hover:bg-slate-200 md:hover:bg-slate-700 md:hover:text-slate-400 md:dark:hover:text-slate-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-            {t('nav.services')}
+            <a href={`/${lang}/about`} class="block md:my-2 py-3 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-slate-800 rounded-lg hover:bg-slate-200 md:hover:bg-slate-700 md:hover:text-slate-400 md:dark:hover:text-slate-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            {t('nav.works')}
           </a>
           </li>
       </ul>
