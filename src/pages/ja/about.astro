@@ -76,6 +76,11 @@ import Modal from '../../components/Modal.astro';
 
         <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100 pt-10 m-10 md:text-left text-center">サービス一覧</h1>
 <div class="pt-10 px-1 flex flex-wrap place-content-center">
+
+    <div class="bg-slate-100/70 dark:bg-slate-800/70 dark:border-gray-700 mb-10 mx-10 p-7 border border-gray-200 rounded-lg drop-shadow-md backdrop-blur-md">
+        <p class="md:text-left text-center text-gray-800 dark:text-gray-100 ">私が提供しているサービス一覧です。自分のお小遣いで運営しているものもあるので運営が不安定です。気になる方は直接メッセージをお願いします。
+        </p>
+    </div>
     
     <Card title="outstndrs">
         <p slot="icon">
@@ -136,7 +141,7 @@ import Modal from '../../components/Modal.astro';
         <p slot="sentence">画像生成AI。無料でお貸しします。自宅サーバーのため不安定ですが高速で生成できます。生成した画像はサーバーに記録されるのでご注意ください。ほとんど停止しているので運が良ければアクセスできます。使いたい方はご連絡ください</p>
         <p slot="weblink">
             <a href="http://sd.souto.tk:7860" class="inline-flex items-center text-blue-500 hover:underline">
-                アクセスする
+                アクセスする(不定期で起動)
                 <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
             </a>
         </p>
@@ -163,10 +168,34 @@ import Modal from '../../components/Modal.astro';
         </p>
         <p slot="weblink">
             <a href="https://chat.souto.tk" class="inline-flex items-center text-blue-500 hover:underline">
-                チャットする
+                チャットする(パスワードが必要です)
                 <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
             </a>
         </p>
     </Card>
 </div>
+
+<div class="fixed inset-0 overflow-hidden z-[-1]">
+    <video
+      poster="/intro.png"
+      class="absolute z-[-1] min-h-screen min-w-full object-cover"
+      webkit-playsinline
+      playsinline
+      muted
+      autoplay
+      onended="
+      let opacity = 0.7;
+      const interval = setInterval(() => {
+        opacity += 0.01;
+        if (opacity >= 1) {
+          clearInterval(interval);
+        }
+        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.body.style.backgroundColor = isDarkMode ? 'rgba(8, 47, 73, ' + opacity + ')' : 'rgba(236, 253, 245, ' + opacity + ')';
+      }, 10);
+      "
+    >
+      <source src="/intro.mp4" type="video/mp4" />
+    </video>
+  </div> 
 </Layout>
