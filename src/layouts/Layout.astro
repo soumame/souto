@@ -18,7 +18,7 @@ import Fonts from '../components/fonts.astro';
 
 
 <!DOCTYPE html>
-<html lang="en" class="dark:bg-slate-600 bg-slate-50">
+<html lang="en" class="dark:bg-slate-600 bg-cyan-50">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -29,15 +29,17 @@ import Fonts from '../components/fonts.astro';
 		<Fonts/>
 		<slot name="header_custom"/> 
 	</head>
-	<body class="">
+	<body class="bg-emerald-50/70 dark:bg-sky-950/70">
 		<language initial="ja" lang="ja,en"></language>
 		<Navbar />
-		<div class="max-h-screen max-w-screen">
+		<div class="">
 		<slot/>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
 		<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="soumame" data-description="Support me on Buy me a coffee!" data-message="Buy me a Juice (not coffee)" data-color="#EAB308" data-position="left" data-x_margin="18" data-y_margin="18"></script>
+
+
 	</body>
 </html>
 <style is:global>

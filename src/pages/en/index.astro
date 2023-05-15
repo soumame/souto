@@ -6,7 +6,7 @@ import Socials from '../../components/socials.astro';
 <Layout title="So Tokumaru">
 	<div slot="header_custom">
 	</div>
-	<div class="bg-emerald-50/50 dark:bg-sky-950/50">
+	<div class="">
 		<div class="lang w-full min-h-screen ">
 			<div class="container mx-auto md:pt-56 p-16 pt-56">
 			<!--プロフィール -->
@@ -45,36 +45,19 @@ import Socials from '../../components/socials.astro';
 				</a>
 			</div>
 			
-	
+			<div class="fixed inset-0 overflow-hidden z-[-1]">
+				<video
+				  poster="/intro.png"
+				  class="absolute z-[-1] min-h-screen min-w-full object-cover"
+				  webkit-playsinline
+				  playsinline
+				  muted
+				  autoplay
+				  loop
+				>
+				  <source src="/intro.mp4" type="video/mp4" />
+				</video>
+			  </div> 
 			<Socials />
-			<!--下に誘導する矢印 -->
-			
-				<div class="flex justify-center content-end mt-36">
-					<svg class="h-14 w-14 fill-slate-700 dark:fill-slate-400"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-				</div>
-				<p class="flex justify-center mt-4 text-lg font-bold text-slate-700 dark:text-slate-400"><a class="underline decoration-yellow-400 decoration-4">Miro</a>でさらに詳しく</p>
-			</div>
-			
-		</div>
-		<div class="lang flex justify-center">
-			<!--Miroのボード埋め込み -->			
-			<iframe class="m-4 w-[95%] h-screen rounded-2xl z-1"src="https://miro.com/app/live-embed/uXjVMV_j7K8=/?embedMode=view_only_without_ui&autoplay=false&moveToViewport=-4267,-3267,766,811" frameBorder="0" scrolling="no" allowFullScreen></iframe>
-		</div>
-	</div>
-	
-	<ScrollUp />
 
-	<div class="fixed inset-0 overflow-hidden z-[-1]">
-		<video
-		  poster="/intro.png"
-		  class="absolute z-[-1] min-h-screen min-w-full object-cover"
-		  webkit-playsinline
-		  playsinline
-		  muted
-		  autoplay
-		  loop
-		>
-		  <source src="/intro.mp4" type="video/mp4" />
-		</video>
-	  </div> 
 </Layout>
