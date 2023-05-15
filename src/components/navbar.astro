@@ -1,6 +1,8 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import LanguagePicker from '../components/LanguagePicker.astro';
+import Socials from '../components/socials.astro';
+
 
 
 const lang = getLangFromUrl(Astro.url);
@@ -68,7 +70,7 @@ setInterval(messageAppear, 4500);
           <img src="/Globe_icon.svg" class="w-6 h-6" alt="language" />
           <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
-        <!-- Dropdown menu -->
+        <!-- Dropdown menu for language pick -->
         <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
           <LanguagePicker />
         </div>
@@ -93,23 +95,23 @@ setInterval(messageAppear, 4500);
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
       <ul class="flex flex-col font-medium p-3 md:p-3 mt-4 border border-gray-100 rounded-lg bg-slate-200/70 md:flex-row md:space-x-4 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800/70 dark:border-gray-700">
           <li>
-            <a href="https://twitter.com/so_to9" class="block md:my-2 py-3 pl-1 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-sky-500 rounded-lg hover:bg-sky-200 md:hover:bg-slate-700 md:hover:text-sky-400 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <a href="https://twitter.com/so_to9" class="block md:my-2 m-1 py-5 pl-1 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-sky-500 bg-sky-200 rounded-lg hover:bg-sky-200 md:hover:bg-slate-700 md:hover:text-sky-400 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
               {t('nav.Twitter')}
               
             </a>
           </li>
           <li>
-            <a href={`/${lang}/community`} class="block md:my-2 py-3 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-violet-500 rounded-lg hover:bg-violet-200 md:hover:bg-slate-700 md:hover:text-violet-400 md:dark:hover:text-violet-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <a href={`/${lang}/community`} class="block md:my-2 m-1 py-5 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-violet-500 bg-violet-200 rounded-lg hover:bg-violet-200 md:hover:bg-slate-700 md:hover:text-violet-400 md:dark:hover:text-violet-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                 {t('nav.Discord')}
             </a>
           </li>
           <li>
-            <a href="https://outstndrs.com" class="block md:my-2 py-3 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white rounded-lg md:bg-cyan-800 hover:bg-cyan-200 md:hover:bg-slate-700 md:hover:text-cyan-400 md:dark:hover:text-cyan-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <a href="https://outstndrs.com" class="block md:my-2 m-1 py-5 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white rounded-lg md:bg-cyan-700 bg-blue-200 hover:bg-cyan-200 md:hover:bg-slate-700 md:hover:text-cyan-400 md:dark:hover:text-cyan-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
             {t('nav.Outstndrs')}
             </a>
           </li>
           <li>
-            <a href={`/${lang}/about`} class="block md:my-2 py-3 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-slate-800 rounded-lg hover:bg-slate-200 md:hover:bg-slate-700 md:hover:text-slate-400 md:dark:hover:text-slate-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <a href={`/${lang}/about`} class="block md:my-2 m-1 py-5 pl-1 pr-4 md:p-3 transition ease-in-out shadow-lg hover:shadow-green-800/30 dark:hover:shadow-green-200/30 text-black text-xl md:text-lg md:text-white md:bg-slate-800 bg-slate-200 rounded-lg hover:bg-slate-200 md:hover:bg-slate-700 md:hover:text-slate-400 md:dark:hover:text-slate-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
             {t('nav.works')}
           </a>
           </li>
