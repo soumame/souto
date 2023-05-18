@@ -2,9 +2,38 @@
 import Layout from '../../layouts/Layout.astro';
 import ScrollUp from '../../components/scroll-up.astro';
 import Socials from '../../components/socials.astro';
+import { SEO } from "astro-seo";
 ---
 <Layout title="得丸創生">
 	<div slot="header_custom">
+		<SEO
+      title="得丸創生"
+      description="そうまめという名前でインターネット上で活動している高校生のウェブサイト。現実世界では得丸創生という名前でマレーシアに留学中。マイクラやりまくってる人。イラレ、ウェブサイト、Blenderとか作ってる人。チーム逸般人の人。"
+      openGraph={{
+        basic: {
+          title: "得丸創生",
+          type: "A type.",
+          image: "/intro.png",
+        }
+      }}
+      twitter={{
+        creator: "@So_to9"
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.svg" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: "/intro.png",
+          },
+          { name: "twitter:title", content: "得丸創生" },
+          { name: "twitter:description", content: "そうまめという名前でインターネット上で活動している高校生のウェブサイト。現実世界では得丸創生という名前でマレーシアに留学中。マイクラやりまくってる人。イラレ、ウェブサイト、Blenderとか作ってる人。チーム逸般人の人。" },
+        ],
+      }}
+    />
+
 	</div>
 	<div class="">
 		<div class="lang w-full min-h-screen ">
