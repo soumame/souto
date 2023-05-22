@@ -25,5 +25,8 @@
     "tailwindcss-classnames": "^3.0.7",
     "tw-elements": "^1.0.0-beta2",
     "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@astrojs/partytown": "^1.2.2"
   }
 }
