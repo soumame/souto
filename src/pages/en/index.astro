@@ -2,10 +2,39 @@
 import Layout from '../../layouts/Layout.astro';
 import ScrollUp from '../../components/scroll-up.astro';
 import Socials from '../../components/socials.astro';
+import { SEO } from "astro-seo";
+
 ---
 <Layout title="So Tokumaru">
 	<div slot="header_custom">
-	</div>
+		
+		<SEO
+      title="So Tokumaru"
+      description="hight school student called 'So'(that's my super-short name) who working based on internet. In real world, I am from Tokyo and living in Selangor, Malaysia. Love Minecraft, Design, Team-building."
+      openGraph={{
+        basic: {
+          title: "So Tokumaru",
+          type: "A type.",
+          image: "/intro.webp",
+        }
+      }}
+      twitter={{
+        creator: "@So_to9"
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.svg" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: "/intro.webp",
+          },
+          { name: "twitter:title", content: "So Tokumaru" },
+          { name: "twitter:description", content: "high school student called 'So'(that's my super-short name) who working based on internet. In real world, I am from Tokyo and living in Selangor, Malaysia. Love Minecraft, Design, Team-building." },
+        ],
+      }}
+    />
 	<div class="">
 		<div class="lang w-full min-h-screen ">
 			<div class="container mx-auto md:pt-56 p-16 pt-56">
@@ -47,7 +76,7 @@ import Socials from '../../components/socials.astro';
 			
 			<div class="fixed inset-0 overflow-hidden z-[-1]">
 				<video
-				  poster="/intro.png"
+				  poster="/intro.webp"
 				  class="absolute z-[-1] min-h-screen min-w-full object-cover"
 				  webkit-playsinline
 				  playsinline
