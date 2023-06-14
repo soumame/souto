@@ -5,7 +5,16 @@ import { SEO } from "astro-seo";
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
+  <script type="text/javascript">
+    window.onload = function() {
+        var lang = navigator.language || navigator.userLanguage; 
+        if(lang.indexOf('ja') >= 0) {
+            window.location.href = '../ja/';
+        } else {
+            window.location.href = '../en/';
+        }
+    }
+  </script>
     <SEO
     title="得丸創生"
     description="そうまめという名前でインターネット上で活動している高校生のウェブサイト。現実世界では得丸創生という名前でマレーシアに留学中。マイクラやりまくってる人。イラレ、ウェブサイト、Blenderとか作ってる人。チーム逸般人の人。"
@@ -49,5 +58,3 @@ import { SEO } from "astro-seo";
 </body>
 </html>
 <!--サーバーから/jaへリダイレクト -->
-
-<meta http-equiv="refresh" content="0;url=/ja" />

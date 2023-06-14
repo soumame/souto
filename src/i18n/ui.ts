@@ -14,6 +14,7 @@ export const languages = {
       'nav.Outstndrs': 'Team Outstndrs',
       'nav.Discord': 'Join Community',
       'nav.soto': 'So Tokumaru',
+      'nav.blog': 'See Blog',
       'button.close': 'Close',
     },
     ja: {
@@ -23,6 +24,7 @@ export const languages = {
       'nav.Outstndrs': 'チーム逸般人',
       'nav.Discord': 'コミュニティに参加',
       'nav.soto': 'So Tokumaru',
+      'nav.blog': 'ブログを見る',
       'button.close': '閉じる',
     },
     mame: {
@@ -32,6 +34,7 @@ export const languages = {
       'nav.Outstndrs': '🫘🫘',
       'nav.Discord': '🫘🫘🫘🫘🫘',
       'nav.soto': '🫘🫘🫘🫘',
+      'nav.blog': '🫘🫘🫘',
       'button.close': '🫘',
 
     },
