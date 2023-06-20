@@ -1,39 +1,19 @@
 ---
-import { SEO } from "astro-seo";
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
-    <SEO
-    title="得丸創生"
-    description="そうまめという名前でインターネット上で活動している高校生のウェブサイト。現実世界では得丸創生という名前でマレーシアに留学中。マイクラやりまくってる人。イラレ、ウェブサイト、Blenderとか作ってる人。チーム逸般人の人。"
-    openGraph={{
-      basic: {
-        title: "得丸創生",
-        type: "A type.",
-        image: "/intro.webp",
-      }
-    }}
-    twitter={{
-      creator: "@So_to9"
-    }}
-    extend={{
-      // extending the default link tags
-      link: [{ rel: "icon", href: "/favicon.svg" }],
-      // extending the default meta tags
-      meta: [
-        {
-          name: "twitter:image",
-          content: "/intro.webp",
-        },
-        { name: "twitter:title", content: "得丸創生" },
-        { name: "twitter:description", content: "そうまめという名前でインターネット上で活動している高校生のウェブサイト。現実世界では得丸創生という名前でマレーシアに留学中。マイクラやりまくってる人。イラレ、ウェブサイト、Blenderとか作ってる人。チーム逸般人の人。" },
-      ],
-    }}
-  />
-
+  <script type="text/javascript">
+    window.onload = function() {
+        var lang = navigator.language || navigator.userLanguage; 
+        if(lang.indexOf('ja') >= 0) {
+            window.location.href = '../ja/';
+        } else {
+            window.location.href = '../en/';
+        }
+    }
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -49,5 +29,3 @@ import { SEO } from "astro-seo";
 </body>
 </html>
 <!--サーバーから/jaへリダイレクト -->
-
-<meta http-equiv="refresh" content="0;url=/ja" />
