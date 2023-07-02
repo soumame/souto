@@ -4,6 +4,33 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <SEO
+    title="得丸創生 / So Tokumaru"
+    description="そうまめという名前でインターネット上で活動している高校生のウェブサイト。High School Student From Tokyo in Malaysia."
+    openGraph={{
+      basic: {
+        title: "得丸創生 / So Tokumaru",
+        type: "A type.",
+        image: "/intro.webp",
+      }
+    }}
+    twitter={{
+      creator: "@So_to9"
+    }}
+    extend={{
+      // extending the default link tags
+      link: [{ rel: "icon", href: "/favicon.svg" }],
+      // extending the default meta tags
+      meta: [
+        {
+          name: "twitter:image",
+          content: "/intro.webp",
+        },
+        { name: "twitter:title", content: "得丸創生 / So Tokumaru" },
+        { name: "twitter:description", content: "そうまめという名前でインターネット上で活動している高校生のウェブサイト。High School Student From Tokyo in Malaysia." },
+      ],
+    }}
+  />
   <script type="text/javascript">
     window.onload = function() {
         var lang = navigator.language || navigator.userLanguage; 
